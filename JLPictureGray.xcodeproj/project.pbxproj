@@ -15,6 +15,11 @@
 		132E4E601E4C85090031E25F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132E4E5E1E4C85090031E25F /* LaunchScreen.storyboard */; };
 		132E4E6B1E4C85090031E25F /* JLPictureGrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 132E4E6A1E4C85090031E25F /* JLPictureGrayTests.m */; };
 		132E4E761E4C85090031E25F /* JLPictureGrayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 132E4E751E4C85090031E25F /* JLPictureGrayUITests.m */; };
+		132E4E861E4C88420031E25F /* JLImageUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 132E4E851E4C88420031E25F /* JLImageUtils.mm */; };
+		132E4E881E4C99AB0031E25F /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = 132E4E871E4C99AB0031E25F /* img.png */; };
+		133423F61E4FEE5C00F60560 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133423F51E4FEE5C00F60560 /* opencv2.framework */; };
+		133423FB1E4FF4CC00F60560 /* SystemStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 133423FA1E4FF4CC00F60560 /* SystemStrategy.m */; };
+		133423FE1E4FF63000F60560 /* OpencCVStrategy.mm in Sources */ = {isa = PBXBuildFile; fileRef = 133423FD1E4FF63000F60560 /* OpencCVStrategy.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		132E4E711E4C85090031E25F /* JLPictureGrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLPictureGrayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		132E4E751E4C85090031E25F /* JLPictureGrayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLPictureGrayUITests.m; sourceTree = "<group>"; };
 		132E4E771E4C85090031E25F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		132E4E841E4C88420031E25F /* JLImageUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLImageUtils.h; sourceTree = "<group>"; };
+		132E4E851E4C88420031E25F /* JLImageUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = JLImageUtils.mm; sourceTree = "<group>"; };
+		132E4E871E4C99AB0031E25F /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
+		133423F51E4FEE5C00F60560 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		133423F81E4FF43400F60560 /* Strategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strategy.h; sourceTree = "<group>"; };
+		133423F91E4FF4CC00F60560 /* SystemStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemStrategy.h; sourceTree = "<group>"; };
+		133423FA1E4FF4CC00F60560 /* SystemStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemStrategy.m; sourceTree = "<group>"; };
+		133423FC1E4FF63000F60560 /* OpencCVStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpencCVStrategy.h; sourceTree = "<group>"; };
+		133423FD1E4FF63000F60560 /* OpencCVStrategy.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpencCVStrategy.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133423F61E4FEE5C00F60560 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +116,16 @@
 		132E4E4F1E4C85090031E25F /* JLPictureGray */ = {
 			isa = PBXGroup;
 			children = (
+				137099621E4E89500025CCA9 /* OpencvFramework */,
+				133423F71E4FF3EE00F60560 /* Strategy */,
+				132E4E831E4C87E40031E25F /* tools */,
 				132E4E531E4C85090031E25F /* AppDelegate.h */,
 				132E4E541E4C85090031E25F /* AppDelegate.m */,
 				132E4E561E4C85090031E25F /* ViewController.h */,
 				132E4E571E4C85090031E25F /* ViewController.m */,
 				132E4E591E4C85090031E25F /* Main.storyboard */,
 				132E4E5C1E4C85090031E25F /* Assets.xcassets */,
+				132E4E871E4C99AB0031E25F /* img.png */,
 				132E4E5E1E4C85090031E25F /* LaunchScreen.storyboard */,
 				132E4E611E4C85090031E25F /* Info.plist */,
 				132E4E501E4C85090031E25F /* Supporting Files */,
@@ -138,6 +157,35 @@
 				132E4E771E4C85090031E25F /* Info.plist */,
 			);
 			path = JLPictureGrayUITests;
+			sourceTree = "<group>";
+		};
+		132E4E831E4C87E40031E25F /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				132E4E841E4C88420031E25F /* JLImageUtils.h */,
+				132E4E851E4C88420031E25F /* JLImageUtils.mm */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		133423F71E4FF3EE00F60560 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				133423F81E4FF43400F60560 /* Strategy.h */,
+				133423F91E4FF4CC00F60560 /* SystemStrategy.h */,
+				133423FA1E4FF4CC00F60560 /* SystemStrategy.m */,
+				133423FC1E4FF63000F60560 /* OpencCVStrategy.h */,
+				133423FD1E4FF63000F60560 /* OpencCVStrategy.mm */,
+			);
+			name = Strategy;
+			sourceTree = "<group>";
+		};
+		137099621E4E89500025CCA9 /* OpencvFramework */ = {
+			isa = PBXGroup;
+			children = (
+				133423F51E4FEE5C00F60560 /* opencv2.framework */,
+			);
+			name = OpencvFramework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +296,7 @@
 			files = (
 				132E4E601E4C85090031E25F /* LaunchScreen.storyboard in Resources */,
 				132E4E5D1E4C85090031E25F /* Assets.xcassets in Resources */,
+				132E4E881E4C99AB0031E25F /* img.png in Resources */,
 				132E4E5B1E4C85090031E25F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,8 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				132E4E581E4C85090031E25F /* ViewController.m in Sources */,
+				133423FE1E4FF63000F60560 /* OpencCVStrategy.mm in Sources */,
+				133423FB1E4FF4CC00F60560 /* SystemStrategy.m in Sources */,
 				132E4E551E4C85090031E25F /* AppDelegate.m in Sources */,
 				132E4E521E4C85090031E25F /* main.m in Sources */,
+				132E4E861E4C88420031E25F /* JLImageUtils.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +474,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JLPictureGray",
+				);
 				INFOPLIST_FILE = JLPictureGray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KT.JLPictureGray;
@@ -433,6 +489,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JLPictureGray",
+				);
 				INFOPLIST_FILE = JLPictureGray/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KT.JLPictureGray;
@@ -505,6 +565,7 @@
 				132E4E7C1E4C85090031E25F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		132E4E7D1E4C85090031E25F /* Build configuration list for PBXNativeTarget "JLPictureGrayTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +574,7 @@
 				132E4E7F1E4C85090031E25F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		132E4E801E4C85090031E25F /* Build configuration list for PBXNativeTarget "JLPictureGrayUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +583,7 @@
 				132E4E821E4C85090031E25F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
